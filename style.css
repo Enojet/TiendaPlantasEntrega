@@ -1,0 +1,295 @@
+*{font-family: Helvetica;};
+html{
+    font-size: 10px;
+}
+
+/*.hidden{display:none;}*/
+
+/*HEADER*/
+
+.barra{
+    background-color: #388455;
+    position:fixed;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    padding:15px;
+    color:#e1e1e1;
+
+}
+.iconLogo{
+display:flex;
+   font-size: 25px; 
+   font-weight: bold;
+}
+.menu2 {
+    li {
+    display: flex;
+    justify-content:left;
+    flex-flow: wrap;
+    border-bottom: 1px solid black;
+    height: 5vh;}
+}   
+.nav1{
+    font-size: 20px;
+    display:none;
+    gap:20px;
+    justify-content: center;
+    list-style: none;
+    .menuItem{
+        text-decoration: none;
+        color: white;
+    }
+    .active{
+        background-color: #73B381;
+        padding: 16px 10px 16px 10px;
+        
+        color:rgb(21, 36, 21);
+    }   
+}
+
+.nav2{
+    font-size: 15px;
+    display:flex;
+    gap:15px;
+    justify-content: end;
+    .shoppingListButton{
+        color: white;
+        }
+        
+}
+main .relative{
+    background-image: url(./public/Img/headerPlanta.jpg);
+    color: white;
+    /*Posición de imagen*/
+    background-size: cover;
+    height: 30vh;
+    width:auto;
+    }
+ 
+/*END OF HEADER*/
+
+/*ITEMS LIST*/
+/*Formato producto plantas: cada pildora tiene su imagen, titulo, descripción, precio y boton*/
+.grid{
+    background-color: #B0D9CA;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,280px));
+    margin:auto;
+    gap:20px;
+    justify-content: center;
+    padding-bottom: 70px;
+    padding-top: 50px;
+}
+
+.divPill{
+    border: solid thin #e1e1e1;
+    border-radius: 5px;
+    background-color: white;
+
+}
+.divPill:hover{
+    width:290px;
+    margin:-5px;
+}
+.divPill img{
+    width:90%;
+    height:170px;
+    margin:5%;
+    border-radius: 5px;
+}
+.divInfo{
+    margin: 10px;
+    text-align: center;
+}
+.divInfo h3{
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+.divInfo p{
+    margin:15px;
+}
+
+ .btn{
+    width:90%;
+    margin-bottom: 5%;
+    padding:5px;
+    background-color: #73B381;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    color:white;
+    cursor: pointer;
+}
+.btn:hover{
+    padding:5px;
+    background-color: #388455;
+}
+@media(min-width:768px) {
+    
+    .nav1{
+        display:flex;
+    }
+    .hamburguesa{
+        display:none;
+    }
+    main .relative{
+        background-image: url(./public/Img/headerPlanta.jpg);
+        color: white;
+        /*Posición de imagen*/
+        background-size: cover;
+        height: 60vh;
+        width:auto;
+        }
+    }
+
+
+/*END ITEM LIST*/
+/*SHOPPING LIST*/
+.shoppingListButton {
+    cursor:pointer;
+}
+.shoppingListContainer {
+    background-color:  rgb(253, 253, 253);
+    width:90%;
+    height:100%;
+    position:fixed;
+    border-radius: 10px;
+    right:10%;
+    top:60px;
+    transition:left 1s;
+    padding:25px;
+    color:grey;
+    font-family: Arial, Helvetica, sans-serif;
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px, 0;
+        color:#005753;
+        border-bottom: solid 2px #005753;
+    }
+   
+}
+table{
+    width: 50%;
+    margin:10px;
+}
+tr{ 
+    padding: 2px;
+    gap: 20px;
+    margin-right:10px;
+    
+}
+thead{
+    background-color: PINK;
+ 
+    font-weight: bold;
+    color:#005753;
+}
+tfoot{
+    font-weight: bold;
+    color:#005753;
+    
+}
+
+.hidden{
+    display:none;
+   }
+.shoppingListContainer h2{
+    display:flex;
+    justify-content: center;
+    align-items:  center;
+}
+ .cart{
+    text-align:center;
+    width:100%;
+    margin:20px;
+}
+.listTotal {
+    display:flex;
+    justify-content: space-between;
+    padding-top:10px;
+    margin: 50px;;
+    border-top: solid 2px rgb(241, 238, 238);    
+   }
+
+table{
+   border-collapse: separate;
+   border-spacing:10px 10px;
+}
+button{padding:5px;}
+.buttons{
+    display:flex;
+    justify-content: center;
+  
+    gap:10px;
+    #order{
+        display:flex;
+        color:white;
+        background-color:#73B381;
+        width:30%;
+        margin-bottom: 5%;
+        padding:10px;
+        border:none;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer; 
+        justify-content: center;
+    }
+    #returnToProduct{
+        display:flex;
+        color:white;
+        background-color:#73B381;
+        width:30%;
+        margin-bottom: 5%;
+        padding:10px;
+        border:none;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;  
+        justify-content: center;
+    }
+}
+.buttons #order:hover{
+        background-color:#388455;  
+    }
+.buttons #returnToProduct:hover {
+    background-color:#388455; 
+    }
+
+
+
+/*END SHOPPING LIST*/
+/*FOOTER*/
+
+/*Flecha de scrol fija en lateral inferior derecho*/
+.flecha {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #388455; ;
+    width: 10%;
+    font-size: 5vh;
+}
+/*Barra inferior fija en todo el ancho de la pagina*/
+footer {
+    background-color: #21242e;
+    height: 7vh;
+    display: flex; /*Barra inferior fija*/
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+footer p {
+    display: flex;
+    justify-content: start;
+    padding-left: 20vw;
+    font-size: 15px;
+    color:white;
+}
+/*END OF FOOTER*/
